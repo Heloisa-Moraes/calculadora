@@ -1,28 +1,42 @@
 import { SafeAreaView, StyleSheet, View } from "react-native";
 
 import Botao from "./src/components/Botao";
+import Visor from "./src/components/Visor";
 
 export default props => {
+
+  adicionarDigito = n => {
+    console.warn(n)
+  }
+
+  limparMemoria = () => {
+    console.warn("limpar memória")
+  }
+
+  setOperacao = operacao => {
+    console.warn(operacao)
+  }
   return (
     <SafeAreaView style={estilos.container}>
+      <Visor />
       <View style={estilos.botao}>
-        <Botao label="AC" triplo/>
-        <Botao label="/" dir/>
-        <Botao label="7" />
-        <Botao label="8" />
-        <Botao label="9" />
-        <Botao label="*" dir/>
-        <Botao label="4" />
-        <Botao label="5" />
-        <Botao label="6" />
-        <Botao label="-" dir/>
-        <Botao label="1" />
-        <Botao label="2" />
-        <Botao label="3" />
-        <Botao label="+" dir/>
-        <Botao label="0" duplo/>
-        <Botao label="." />
-        <Botao label="=" dir/>
+        <Botao label="AC" onClick={limparMemoria} triplo/>
+        <Botao label="/" onClick={setOperacao}/>
+        <Botao label="7" onClick={adicionarDigito}/>
+        <Botao label="8"onClick={adicionarDigito} />
+        <Botao label="9" onClick={adicionarDigito}/>
+        <Botao label="*" onClick={setOperacao}/>
+        <Botao label="4" onClick={adicionarDigito}/>
+        <Botao label="5" onClick={adicionarDigito}/>
+        <Botao label="6" onClick={adicionarDigito}/>
+        <Botao label="-" onClick={setOperacao}/>
+        <Botao label="1" onClick={adicionarDigito}/> 
+        <Botao label="2" onClick={adicionarDigito}/>
+        <Botao label="3" onClick={adicionarDigito}/>
+        <Botao label="+" onClick={setOperacao}/>
+        <Botao label="0" onClick={adicionarDigito} duplo/>
+        <Botao label="." onClick={adicionarDigito}/>
+        <Botao label="=" onClick={setOperacao}/>
         
 
       </View>

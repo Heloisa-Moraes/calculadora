@@ -12,8 +12,8 @@ export default props => {
     if(props.dir) estilosBotao.push(estilos.botaoDir) /* chama os botoes da direita e deixa com a cor diferente */
 
     return(
-        <TouchableHighlight>
-            <Text style={estilosBotao}> {props.label}</Text>
+        <TouchableHighlight onPress={() => props.onClick(props.label)}>
+            <Text style={estilosBotao}>{props.label}</Text>
         </TouchableHighlight>
         
     )
