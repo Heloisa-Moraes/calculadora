@@ -10,3 +10,7 @@ depois realizar este comando ao baixar o projeto)
 
 
 caso nao rode o que voce atualizou, abrir o terminal e apertar r para recarregar o app 
+
+instalando o metro: 
+npx expo install react-native-web react-dom @expo/metro-runtime
+
